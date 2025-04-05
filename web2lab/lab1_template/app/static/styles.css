@@ -1,0 +1,217 @@
+/* Основные настройки */
+:root {
+    --cream: #EAE7DC;
+    --beige: #D8C3A5;
+    --gray: #8E8D8A;
+    --coral: #E98074;
+    --red: #E85A4F;
+}
+
+/* Шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--cream);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+/* Навигационная панель */
+.navbar {
+    background-color: var(--gray) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--coral) !important;
+}
+
+/* Карточки */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    background-color: rgba(233, 128, 116, 0.1);
+    border-top: none;
+}
+
+/* Кнопки */
+.btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--red);
+    border-color: var(--red);
+}
+
+.btn-primary:hover {
+    background-color: var(--coral);
+    border-color: var(--coral);
+    transform: translateY(-2px);
+}
+
+/* Формы */
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--beige);
+}
+
+.form-control:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 0.25rem rgba(233, 128, 116, 0.25);
+}
+
+/* Аватар */
+.avatar {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--beige);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Уведомления */
+.alert {
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+.alert-success {
+    background-color: rgba(232, 90, 79, 0.1);
+    border-color: rgba(232, 90, 79, 0.3);
+    color: var(--gray);
+}
+
+/* Комментарии */
+.comment {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.replies {
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+    border-left: 3px solid var(--beige);
+}
+
+.reply {
+    background-color: rgba(216, 195, 165, 0.1);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Подвал */
+footer {
+    color: white;
+    background-color: var(--gray);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+/* Специальные страницы */
+.secret-page {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+    max-width: 800px;
+}
+
+.visits-counter {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .replies {
+        padding-left: 1rem;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}

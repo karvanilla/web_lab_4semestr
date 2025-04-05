@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="mt-5 text-center">Об авторе</h1>
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <img class="avatar" src="{{ url_for('static', filename='images/avatar.jpg') }}" alt="Author">
+    </div>
+    <div class="col-md-8 text-justify d-flex align-items-center">
+        
+        <p>
+                                🎀 🎀 🎀 🎀 🎀 🎀 🎀 🎀 🎀 🎀  <br>
+                                Лёвкина Карина <br>
+                                Группа 231-352 <br>
+                                All socials - @karvanilla  <br>
+                                🎀 🎀 🎀 🎀 🎀 🎀 🎀 🎀 🎀 🎀  
+        </p>
+
+        
+    </div>
+</div>
+{% endblock %}

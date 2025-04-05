@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="my-5">🎀Параметры URL🎀</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>🎀Параметр🎀</th>
+            <th>🎀Значение🎀</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for key, value in params.items() %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
